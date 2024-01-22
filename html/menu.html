@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tea Cubs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand text-wrap text-break" href="../index.html">
+                    <img src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="36" height="30"
+                        class="d-inline-block align-text-top">
+                    <span class="tea-color">Tea</span>&nbsp;<span class="cubs-color">Cubs</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs current active" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" role="button" data-bs-toggle="modal"
+                                data-bs-target="#reservationModal">Reservations</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" href="find-store.html">Location</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-wrap text-break">Already have an account?</span>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle text-wrap text-break" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Login
+                        </button>
+                        <ul id="login-dp" class="dropdown-menu dropdown-menu-end">
+                            <li class="container ps-4 pe-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        Login via
+                                        <div class="social-buttons row mt-3 mb-2">
+                                            <a href="#Facebool-Login"
+                                                class="btn btn-outline-warning col-6 fb-btn rounded">
+                                                <img src="../assets/icons/facebook.svg" alt="Facebook" width="20"
+                                                    height="20">
+                                                Facebook
+                                            </a>
+                                            <a href="#Google-Login"
+                                                class="btn btn-outline-info col-6 google-btn rounded">
+                                                <img src="../assets/icons/google.svg" alt="Google" width="20"
+                                                    height="20">
+                                                Gmail
+                                            </a>
+                                        </div>
+                                        <span style="display: table; margin: 0 auto;">or</span>
+                                        <form class="form border-top">
+                                            <div class="form-group mt-2 form-floating">
+                                                <input type="email" class="form-control" id="exampleInputEmail2"
+                                                    placeholder="Email address" required>
+                                                <label class="form-label sr-only ms-1" for="exampleInputEmail2">Email
+                                                    address</label>
+                                            </div>
+                                            <div class="form-group mt-1 form-floating">
+                                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                                    placeholder="Password" required>
+                                                <label class="form-label sr-only ms-1"
+                                                    for="exampleInputPassword2">Password</label>
+                                                <div class="help-block text-end"><a href=""
+                                                        class="text-decoration-none">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group mt-4">
+                                                <a class="btn btn-primary w-100 rounded" href="profile.html"
+                                                    role="button">Sign
+                                                    in</a>
+                                            </div>
+                                            <div class="checkbox mt-1 mt-1">
+                                                <label>
+                                                    <input type="checkbox">Remember me
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Reservation Modal -->
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reserveModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content position-relative brown-bg">
+                    <button class="btn-close p-3" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body p-5">
+                        <header class="mb-1 text-center sub-header p-0 brown-bg">
+                            <img class="bi p-0" src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="150"
+                                height="100">
+                            <h1 class="p-0"><span class="tea-color p-0">Tea</span>&nbsp;<span
+                                    class="cubs-color p-0">Cubs</span></h1>
+                        </header>
+                        <div class="mb-0 text-center border-bottom p-2 rounded-top offWhite-bg">
+                            <h3 class="handwriting-text">Make a reservation</h3>
+                            <h5 class="text-uppercase text-gray-500 fw-normal">Reserve your table now</h5>
+                        </div>
+                        <form class="p-lg-5 was-validated rounded-bottom offWhite-bg" novalidate>
+                            <div class="row gy-3">
+                                <div class="col-lg-12 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResName"
+                                        type="text" name="res_name" placeholder="Your Name" required>
+                                    <label class="form-label ms-1" for="modalResNam">Name</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your name!</div>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResEmail"
+                                        type="email" name="res_email" placeholder="email@email.com" required>
+                                    <label class="form-label ms-1" for="modalResEmail"> Email</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your email!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResNumber"
+                                        type="number" name="res_number" placeholder="09XXXXXXXXX" required>
+                                    <label class="form-label ms-1" for="modalResNumber">Contact No.</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your contact number!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResPeople"
+                                        type="number" name="res_people" placeholder="1" required>
+                                    <label class="form-label ms-1" for="modalResPeople">No. of Guest</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input total number of guest (including
+                                        yourself)!</div>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <select class="form-select shadow-0 border-0 border-bottom" id="modalSelect"
+                                        name="res_select" aria-placeholder="Tea Cubs Guimba" required>
+                                        <option disabled selected value="">Choose a branch</option>
+                                        <option value="1">Tea Cubs Guimba</option>
+                                        <option value="2">Tea Cubs Roxas Bagumbayan</option>
+                                        <option value="3">Tea Cubs Roxas San Mariano</option>
+                                    </select>
+                                    <label class="form-label ms-1" for="modalSelect">Branch</label>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 border-0 border-bottom" id="modalResDate"
+                                        type="date" name="res_date" placeholder="dd/mm/yy" required>
+                                    <label class="form-label ms-1" for="modalResDate">Date</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input a date!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 border-0 border-bottom" id="modalResTime"
+                                        type="time" name="res_time" placeholder="time" required>
+                                    <label class="form-label ms-1" for="modalResTime">Time</label>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <textarea class="form-control shadow-0 px-2 border-0 border-bottom"
+                                        id="modalRequest" rows="7" name="res_request"
+                                        placeholder="Special request"></textarea>
+                                    <label class="form-label ms-1" for="modalRequest">Special request</label>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button class="btn btn-primary rounded" type="submit">Reserve now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Reservation Modal -->
+    </header>
+    <main>
+        <div class="container-fluid overflow-hidden">
+            <div class="row vh-100 overflow-auto">
+                <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-light d-flex sticky-top">
+                    <div
+                        class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2">
+                        <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start"
+                            id="menu-nav">
+                            <li class="nav-item">
+                                <a href="#featured-collapse" class="nav-link px-sm-0 px-2 sub-navs"
+                                    data-bs-toggle="collapse" data-bs-target="#featured-collapse" role="button"
+                                    aria-expanded="true" aria-controls="featured-collapse">
+                                    <span class="ms-1 d-sm-inline text-black">Featured</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#drinks-collapse" class="nav-link px-sm-0 px-2 sub-navs"
+                                    data-bs-toggle="collapse" data-bs-target="#drinks-collapse" role="button"
+                                    aria-expanded="false" aria-controls="drinks-collapse">
+                                    <span class="ms-1 d-sm-inline text-black">Drinks</span>
+                                </a>
+                                <!--  Drinks Dropdown -->
+                                <div class="collapse" id="drinks-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="#premiumBlends" class="link-dark rounded" data-bs-toggle="collapse"
+                                                data-bs-target="#premiumBlends" role="button" aria-expanded="false"
+                                                aria-controls="premiumBlends">Premium Blends</a></li>
+                                        <li><a href="#classicMilkteas" class="link-dark rounded"
+                                                data-bs-toggle="collapse" data-bs-target="#classicMilkteas"
+                                                role="button" aria-expanded="false"
+                                                aria-controls="classicMilkteas">Classic Milkteas</a></li>
+                                        <li><a href="#fruitQuenchers" class="link-dark rounded"
+                                                data-bs-toggle="collapse" data-bs-target="#fruitQuenchers" role="button"
+                                                aria-expanded="false" aria-controls="fruitQuenchers">Fruit Quenchers</a>
+                                        </li>
+                                        <li><a href="#melonaSmoothies" class="link-dark rounded"
+                                                data-bs-toggle="collapse" data-bs-target="#melonaSmoothies"
+                                                role="button" aria-expanded="false"
+                                                aria-controls="melonaSmoothies">Melona Smoothies</a></li>
+                                        <li><a href="#espressoCoffees" class="link-dark rounded"
+                                                data-bs-toggle="collapse" data-bs-target="#espressoCoffees"
+                                                role="button" aria-expanded="false"
+                                                aria-controls="espressoCoffees">Espresso Coffees</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End of Drinks Dropdown -->
+                            </li>
+                            <li class="nav-item">
+                                <a href="#cubsFavorites-collapse" class="nav-link px-sm-0 px-2 sub-navs"
+                                    data-bs-toggle="collapse" data-bs-target="#cubsFavorites-collapse" role="button"
+                                    aria-expanded="false" aria-controls="cubsFavorites-collapse">
+                                    <span class="ms-1 d-sm-inline text-black">Cubs Favorites</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#koreanMains-collapse" class="nav-link px-sm-0 px-2 sub-navs"
+                                    data-bs-toggle="collapse" data-bs-target="#koreanMains-collapse" role="button"
+                                    aria-expanded="false" aria-controls="koreanMains-collapse">
+                                    <span class="ms-1 d-sm-inline text-black">Korean Mains</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#desserts-collapse" class="nav-link px-sm-0 px-2 sub-navs"
+                                    data-bs-toggle="collapse" data-bs-target="#desserts-collapse" role="button"
+                                    aria-expanded="false" aria-controls="desserts-collapse">
+                                    <span class="ms-1 d-sm-inline text-black">Desserts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col container w-100 h-100 p-0">
+                    <div class="z-1 row position-absolute bottom-0 end-0 toggle">
+                        <div class="col-12 d-flex flex-row flex-nowrap justify-content-end ms-3">
+                            <a class="btn" data-bs-toggle="offcanvas" href="#shoppingCart" role="button"
+                                aria-controls="shoppingCart">
+                                <img src="../assets/icons/cart.svg" alt="Cart" width="35" height="35">
+                            </a>
+                        </div>
+                    </div>
+                    <aside>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="shoppingCart"
+                            aria-labelledby="shoppingCartLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="shoppingCartLabel">Your Cart</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="total d-flex align-items-center border-top py-5">
+                                    <div class="w-50">
+                                        <span class="d-block subtotal-label">Subtotal</span>
+                                        <strong class="total-price">₱0.00</strong>
+                                    </div>
+                                    <div class="w-50">
+                                        <a href="checkout-form.html"
+                                            class="btn btn-secondary rounded btn-block">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <section class="row h-100 w-100 m-0 p-0">
+                        <div class="col h-100 w-100 p-0">
+                            <div class="collapse show" id="featured-collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Feature Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Feature Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Feature Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="premiumBlends">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 7</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 8</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 9</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="classicMilkteas">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="fruitQuenchers">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="melonaSmoothies">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="espressoCoffees">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Drinks Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="cubsFavorites-collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Cubs Favorites Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Cubs Favorites Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Cubs Favorites Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="koreanMains-collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Korean Main Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="desserts-collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 1</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 2</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 3</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 4</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 5</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 6</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 7</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 8</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-lg-4">
+                                            <div class="card mx-3 mt-5">
+                                                <img class="card-img-top" src="../assets/img/feature-1.png" />
+                                                <div class="card-body text-center mx-auto">
+                                                    <h5 class="card-title fw-bold">Dessert Item No. 9</h5>
+                                                    <p class="card-text">₱299</p>
+                                                    <a href="#" class="btn cart p-2 text-wrap">ADD TO CART</a>
+                                                    <a href="#" class="btn details p-2 text-wrap">view details</a><br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div
+            class="container d-flex flex-wrap sticky-bottom justify-content-between align-items-center py-3 text-wrap text-break">
+            <p class="col-md-4 m-0 p-0 text-muted">&copy; 2023 Tea Cubs Cafe. All Rights Reserved.</p>
+            <a href="menu.html"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="bi me-2" src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="60" height="52">
+            </a>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a href="https://www.facebook.com/teacubsph" target="_blank">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook" width="32" height="32">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.instagram.com/teacubsph/" target="_blank">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

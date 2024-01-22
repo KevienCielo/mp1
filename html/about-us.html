@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tea Cubs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand text-wrap text-break" href="../index.html">
+                    <img src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="36" height="30"
+                        class="d-inline-block align-text-top">
+                    <span class="tea-color">Tea</span>&nbsp;<span class="cubs-color">Cubs</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" role="button" data-bs-toggle="modal"
+                                data-bs-target="#reservationModal">Reservations</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs current active" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item text-wrap text-break">
+                            <a class="nav-link navs" href="find-store.html">Location</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-wrap text-break">Already have an account?</span>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle text-wrap text-break" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Login
+                        </button>
+                        <ul id="login-dp" class="dropdown-menu dropdown-menu-end">
+                            <li class="container ps-4 pe-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        Login via
+                                        <div class="social-buttons row mt-3 mb-2">
+                                            <a href="#Facebool-Login" class="btn btn-outline-warning col-6 fb-btn">
+                                                <img src="../assets/icons/facebook.svg" alt="Facebook" width="20"
+                                                    height="20">
+                                                Facebook
+                                            </a>
+                                            <a href="#Google-Login" class="btn btn-outline-info col-6 google-btn">
+                                                <img src="../assets/icons/google.svg" alt="Google" width="20"
+                                                    height="20">
+                                                Gmail
+                                            </a>
+                                        </div>
+                                        <span style="display: table; margin: 0 auto;">or</span>
+                                        <form class="form border-top">
+                                            <div class="form-group mt-2 form-floating">
+                                                <input type="email" class="form-control" id="exampleInputEmail2"
+                                                    placeholder="Email address" required>
+                                                <label class="form-label sr-only ms-1" for="exampleInputEmail2">Email
+                                                    address</label>
+                                            </div>
+                                            <div class="form-group mt-1 form-floating">
+                                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                                    placeholder="Password" required>
+                                                <label class="form-label sr-only ms-1"
+                                                    for="exampleInputPassword2">Password</label>
+                                                <div class="help-block text-end"><a href=""
+                                                        class="text-decoration-none">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group mt-4">
+                                                <a class="btn btn-primary w-100" href="profile.html" role="button">Sign
+                                                    in</a>
+                                            </div>
+                                            <div class="checkbox mt-1 mt-1">
+                                                <label>
+                                                    <input type="checkbox">Remember me
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Reservation Modal -->
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reserveModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content position-relative brown-bg">
+                    <button class="btn-close p-3" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body p-5">
+                        <header class="mb-1 text-center sub-header p-0 brown-bg">
+                            <img class="bi p-0" src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="150"
+                                height="100">
+                            <h1 class="p-0"><span class="tea-color p-0">Tea</span>&nbsp;<span
+                                    class="cubs-color p-0">Cubs</span></h1>
+                        </header>
+                        <div class="mb-0 text-center border-bottom p-2 rounded-top offWhite-bg">
+                            <h3 class="handwriting-text">Make a reservation</h3>
+                            <h5 class="text-uppercase text-gray-500 fw-normal">Reserve your table now</h5>
+                        </div>
+                        <form class="p-lg-5 was-validated rounded-bottom offWhite-bg" novalidate>
+                            <div class="row gy-3">
+                                <div class="col-lg-12 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResName"
+                                        type="text" name="res_name" placeholder="Your Name" required>
+                                    <label class="form-label ms-1" for="modalResNam">Name</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your name!</div>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResEmail"
+                                        type="email" name="res_email" placeholder="email@email.com" required>
+                                    <label class="form-label ms-1" for="modalResEmail"> Email</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your email!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResNumber"
+                                        type="number" name="res_number" placeholder="09XXXXXXXXX" required>
+                                    <label class="form-label ms-1" for="modalResNumber">Contact No.</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input your contact number!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 px-2 border-0 border-bottom" id="modalResPeople"
+                                        type="number" name="res_people" placeholder="1" required>
+                                    <label class="form-label ms-1" for="modalResPeople">No. of Guest</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input total number of guest (including
+                                        yourself)!</div>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <select class="form-select shadow-0 border-0 border-bottom" id="modalSelect"
+                                        name="res_select" aria-placeholder="Tea Cubs Guimba" required>
+                                        <option disabled selected value="">Choose a branch</option>
+                                        <option value="1">Tea Cubs Guimba</option>
+                                        <option value="2">Tea Cubs Roxas Bagumbayan</option>
+                                        <option value="3">Tea Cubs Roxas San Mariano</option>
+                                    </select>
+                                    <label class="form-label ms-1" for="modalSelect">Branch</label>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 border-0 border-bottom" id="modalResDate"
+                                        type="date" name="res_date" placeholder="dd/mm/yy" required>
+                                    <label class="form-label ms-1" for="modalResDate">Date</label>
+                                    <div class="valid-feedback">Looks Good!</div>
+                                    <div class="invalid-feedback">Please input a date!</div>
+                                </div>
+                                <div class="col-lg-6 form-floating">
+                                    <input class="form-control shadow-0 border-0 border-bottom" id="modalResTime"
+                                        type="time" name="res_time" placeholder="time" required>
+                                    <label class="form-label ms-1" for="modalResTime">Time</label>
+                                </div>
+                                <div class="col-lg-12 form-floating">
+                                    <textarea class="form-control shadow-0 px-2 border-0 border-bottom"
+                                        id="modalRequest" rows="7" name="res_request"
+                                        placeholder="Special request"></textarea>
+                                    <label class="form-label ms-1" for="modalRequest">Special request</label>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button class="btn btn-primary" type="submit">Reserve now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Reservation Modal -->
+    </header>
+    <main>
+        <div class="tea-bg text-white">
+            <div class="container py-5">
+                <div class="row h-100 align-items-center py-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-4">"It all starts with a cup"</h1>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <img src="../assets/img/teacubs-logo-2.png" alt="teacubs-logo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cubs-bg py-5">
+            <div class="container py-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+                        <h2 class="font-weight-light">Tea Cubs</h2>
+                        <p class="lead fst-italic text-muted mb-4 ">
+                            Tea Cubs specializes in tasty varieties of milk, fruit teas as well as yogurt smoothies, and
+                            coffee concoction. The place is a fusion of environmental and modern interior design which
+                            makes you comfortable and feeling home. Tea Cubs strives for the perfect balance between
+                            visual happiness and great food.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
+                        <img src="../assets/img/aboutus.png" alt="about us" class="img-fluid mb-4 mb-lg-0 rounded">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 px-5 mx-auto">
+                        <img src="../assets/img/owner.png" alt="Cafe Owner" class="img-fluid mb-4 mb-lg-0 rounded">
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+                        <h2 class="font-weight-light">Mark Dave Lee</h2>
+                        <p class="text-muted mb-4">Learn more about the owner and the story about how the business
+                            started.</p>
+                        <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div
+            class="container d-flex flex-wrap sticky-bottom justify-content-between align-items-center py-3 text-wrap text-break">
+            <p class="col-md-4 m-0 p-0 text-muted">&copy; 2023 Tea Cubs Cafe. All Rights Reserved.</p>
+            <a href="about-us.html"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="bi me-2" src="../assets/img/teacubs-logo.png" alt="Tea Cubs Logo" width="60" height="52">
+            </a>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a href="https://www.facebook.com/teacubsph" target="_blank">
+                        <img src="../assets/icons/facebook.svg" alt="Facebook" width="32" height="32">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.instagram.com/teacubsph/" target="_blank">
+                        <img src="../assets/icons/instagram.svg" alt="Instagram" width="32" height="32">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
